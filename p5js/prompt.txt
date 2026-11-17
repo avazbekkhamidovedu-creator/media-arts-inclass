@@ -1,0 +1,11 @@
+i want to create smth creative with p5js that reflects my uzbek culture, especially our art. i was thinking about do‘ppi, the traditional uzbek cap with embroidery. it is part of our culture, so i think it would be nice to make an interactive artwork inspired by it and share it with people who might not know about it.
+
+i also think it would be interesting to explore memory. sometimes we see a pattern many times and remember how it feels or some of its shapes, but we dont remember every detail. could u make the artwork so people can look at a do‘ppi and then try to draw the pattern from memory? i want them to see what they remember and what they add from their own imagination.
+
+lets call it “Doppi From Memory.” i imagine the do‘ppi from above, like it is sitting on a table. maybe use a dark fabric, light embroidery, and a warm background. could u offer different patterns too, like a pepper-inspired pattern, a flower, and a star? people should be able to switch between them anytime, okay?
+
+when someone starts, show the pattern for 5 seconds and then let it fade. after that, they can draw with their mouse or finger. when they draw one line, repeat it in four directions around the center, so it starts to look like embroidery on the do‘ppi. please add some thread colors and an undo button too.
+
+also, can u add a “See doppi” option while they are drawing? so if they forget the pattern, they can look at it again and then hide it. when they finish, show their drawing next to the original pattern so they can compare them. no need to give a score, i just want them to see what they remembered and what they created differently. and let them try again with another pattern.
+
+please keep the html, css, and javascript in separate files, and make sure it works on both a computer and a phone. the patterns can be creative interpretations inspired by uzbek embroidery. please include a link to the source for the Chust-style do‘ppi too.
