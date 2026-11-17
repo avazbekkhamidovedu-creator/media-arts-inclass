@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Doppi From Memory</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"
+      defer
+    ></script>
+    <script src="js/sketch.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="kicker">DO‘PPI · CHUST, UZBEKISTAN</span>
+        <h1>Doppi From <em>Memory</em></h1>
+        <p>
+          Look at the embroidery for five seconds. Then stitch what you
+          remember.
+        </p>
+      </header>
+
+      <section class="workbench" aria-label="Embroidery workbench">
+        <div class="guide">
+          <p class="kicker" id="phase">LOOK</p>
+          <h2 id="instruction" aria-live="polite">Look closely.</h2>
+          <p id="hint">
+            Choose a pattern, then notice how its motifs turn around the center.
+          </p>
+          <div class="timer" id="timer" hidden>
+            <span id="seconds" aria-hidden="true">5</span>
+            <progress
+              id="progress"
+              max="5"
+              value="5"
+              aria-label="Seconds left to look"
+            ></progress>
+          </div>
+          <label for="pattern">Choose a pattern</label>
+          <select id="pattern">
+            <option value="pepper">Pepper</option>
+            <option value="flower">Flower</option>
+            <option value="star">Star</option>
+          </select>
+          <div id="tools" hidden>
+            <button type="button" class="quiet" id="peek" aria-pressed="false">
+              See doppi
+            </button>
+            <div class="palette" aria-label="Thread color">
+              <button
+                type="button"
+                class="swatch ivory"
+                data-color="#f6e6bf"
+                aria-label="Ivory thread"
+                aria-pressed="true"
+              ></button>
+              <button
+                type="button"
+                class="swatch rust"
+                data-color="#e89070"
+                aria-label="Rust thread"
+                aria-pressed="false"
+              ></button>
+              <button
+                type="button"
+                class="swatch sage"
+                data-color="#b4cba4"
+                aria-label="Sage thread"
+                aria-pressed="false"
+              ></button>
+            </div>
+            <button type="button" class="quiet" id="undo" disabled>
+              Undo stitch
+            </button>
+          </div>
+          <button type="button" id="action" disabled>Show the doppi</button>
+          <noscript
+            ><p>Enable JavaScript to use the embroidery canvas.</p></noscript
+          >
+        </div>
+
+        <div class="pieces">
+          <figure id="original" hidden>
+            <div class="canvas-holder" id="reference-canvas"></div>
+            <figcaption>Reference pattern</figcaption>
+          </figure>
+          <figure id="current">
+            <div class="canvas-holder" id="working-canvas"></div>
+            <figcaption id="caption">The doppi</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <footer>
+        Pattern inspired by Chust pepper embroidery.
+        <a href="https://collection.powerhouse.com.au/object/398189"
+          >Explore a Chust-type cap at the Powerhouse</a
+        >.
+      </footer>
+    </main>
+  </body>
+</html>
