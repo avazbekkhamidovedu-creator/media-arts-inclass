@@ -1,0 +1,580 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f4ed;
+  color: #211d30;
+  font:
+    15px Arial,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  background: #e5ff4b;
+  border-bottom: 2px solid #211d30;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.pill {
+  border: 1px solid #211d30;
+  border-radius: 30px;
+  padding: 9px 15px;
+  font-size: 12px;
+  background: white;
+}
+
+.layout {
+  display: flex;
+  max-width: 1350px;
+  margin: auto;
+  gap: 28px;
+  padding: 32px 24px;
+}
+
+.sidebar {
+  width: 190px;
+  flex-shrink: 0;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: sticky;
+  top: 25px;
+}
+
+nav a {
+  padding: 15px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+nav a.active,
+nav a:hover {
+  background: #7254ff;
+  color: white;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  max-width: 720px;
+}
+
+.right {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+h1 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1;
+  letter-spacing: -3px;
+  margin: 15px 0;
+}
+
+h2 {
+  letter-spacing: -1px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.hero {
+  background: #ff907f;
+  padding: 28px;
+  border: 2px solid #211d30;
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.thread-hero {
+  background: #b8a4ff;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.hero p {
+  max-width: 400px;
+  margin-bottom: 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 2px solid #ddd6e4;
+  margin: 22px 0 0;
+  padding: 16px 5px;
+  font-weight: bold;
+}
+
+.tabs a:first-child {
+  color: #6344e4;
+}
+
+.post,
+.composer,
+.box {
+  background: white;
+  border: 1px solid #ded8e5;
+  padding: 23px;
+  border-radius: 18px;
+  margin: 16px 0;
+}
+
+.post-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.meta {
+  font-size: 12px;
+  color: #787080;
+  margin-top: 5px;
+}
+
+.post p {
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.actions button {
+  border: 0;
+  background: none;
+  color: #70677c;
+  padding: 5px;
+}
+
+.actions button[aria-pressed="true"] {
+  color: #e33e79;
+}
+
+.tag {
+  color: #7550db;
+}
+
+.box {
+  margin-top: 0;
+}
+
+.box.yellow {
+  background: #e5ff4b;
+  border-color: #211d30;
+}
+
+.box h3 {
+  margin: 0 0 20px;
+}
+
+.trend {
+  display: block;
+  padding: 13px 0;
+  border-bottom: 1px solid #e4dfea;
+}
+
+.trend:last-child {
+  border: 0;
+}
+
+.trend small {
+  display: block;
+  color: #80788a;
+  margin-top: 6px;
+}
+
+.friend {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.friend img {
+  width: 37px;
+  height: 37px;
+}
+
+.friend b {
+  font-size: 13px;
+}
+
+.friend button {
+  margin-left: auto;
+  background: #eee8ff;
+  border: 0;
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 11px;
+}
+
+.footer {
+  font-size: 11px;
+  color: #81778d;
+  line-height: 1.8;
+}
+
+.primary {
+  background: #7254ff;
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  padding: 12px 23px;
+  font-weight: bold;
+}
+
+.banner {
+  height: 150px;
+  background: #b9a5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  letter-spacing: 20px;
+  border-radius: 20px;
+}
+
+.profile {
+  background: white;
+  border: 1px solid #ded8e5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.profile .banner {
+  border-radius: 0;
+}
+
+.profile-content {
+  padding: 25px;
+}
+
+.profile-content > .avatar {
+  width: 85px;
+  height: 85px;
+  margin-top: -65px;
+  border: 5px solid white;
+  position: relative;
+}
+
+.profile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats {
+  display: flex;
+  gap: 25px;
+  margin-top: 22px;
+  font-size: 13px;
+}
+
+.art-card {
+  background: #e5ff4b;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 150px;
+  font-weight: 900;
+  font-size: 28px;
+  transform: rotate(-1deg);
+}
+
+.art-card span {
+  font-size: 75px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #fe5b92;
+  outline-offset: 3px;
+}
+
+.reply-form {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #e4dfea;
+}
+
+.reply-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.reply-form textarea {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: 1px solid #cfc5df;
+  border-radius: 12px;
+  background: #faf8ff;
+  resize: vertical;
+  color: #211d30;
+}
+
+.reply-form .primary {
+  display: block;
+  margin-left: auto;
+}
+
+.human-reply {
+  margin-top: 16px;
+  padding: 16px;
+  border-left: 3px solid #7254ff;
+  background: #f4efff;
+  border-radius: 0 12px 12px 0;
+}
+
+.human-reply b {
+  font-size: 13px;
+}
+
+.human-reply p,
+.user-post > p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.human-reply p {
+  margin-bottom: 0;
+}
+
+.reply-form[hidden] {
+  display: none;
+}
+
+.composer {
+  padding: 22px 24px;
+  border-radius: 12px;
+}
+
+.composer > b {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.composer label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.composer textarea {
+  display: block;
+  width: 100%;
+  min-height: 116px;
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border: 1px solid #ded8e5;
+  border-radius: 8px;
+  background: #faf9fc;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #211d30;
+  resize: vertical;
+  outline: none;
+}
+
+.composer textarea::placeholder {
+  color: #89828f;
+}
+
+.composer textarea:focus {
+  border-color: #7254ff;
+  box-shadow: 0 0 0 3px #7254ff18;
+  background: #fff;
+}
+
+.compose-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 40px;
+}
+
+.composer .primary,
+.reply-form .primary {
+  border-radius: 8px;
+  padding: 11px 25px;
+  font-size: 14px;
+  line-height: 1.3;
+  min-width: 85px;
+}
+
+.composer .primary:hover,
+.reply-form .primary:hover {
+  background: #5e40df;
+}
+
+.composer .primary:active,
+.reply-form .primary:active {
+  transform: translateY(1px);
+}
+
+.reply-form textarea:focus {
+  outline: 2px solid #7254ff;
+  outline-offset: 2px;
+}
+
+.human-reply .actions {
+  margin-top: 10px;
+  gap: 12px;
+}
+
+.human-reply .reply-button {
+  font-size: 12px;
+  padding: 4px 0;
+  color: #6749c7;
+}
+
+.human-reply .human-reply {
+  margin-left: 4px;
+  padding: 12px;
+  background: #fff9;
+}
+
+.human-reply .replies .replies {
+  margin-left: 0;
+}
+
+.human-reply textarea {
+  min-width: 0;
+}
+
+.replies {
+  min-width: 0;
+}
+
+.human-reply {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1050px) {
+  .right {
+    display: none;
+  }
+  .main {
+    max-width: none;
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    padding: 14px 20px;
+  }
+  .layout {
+    padding: 16px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar nav {
+    flex-direction: row;
+    position: static;
+    justify-content: space-between;
+    gap: 3px;
+  }
+  .sidebar nav a {
+    font-size: 12px;
+    padding: 12px;
+  }
+  .sidebar .footer {
+    display: none;
+  }
+  .hero {
+    padding: 23px;
+  }
+  h1 {
+    font-size: 45px;
+    max-width: 260px;
+  }
+  .post,
+  .composer {
+    padding: 18px;
+  }
+  .composer textarea {
+    min-height: 110px;
+  }
+  .pill {
+    font-size: 10px;
+  }
+  .stats {
+    gap: 15px;
+  }
+  .art-card {
+    font-size: 21px;
+  }
+
+  .human-reply .human-reply {
+    margin-left: 0;
+    padding: 10px 7px;
+  }
+  .human-reply .primary {
+    min-width: 0;
+    padding: 10px 12px;
+  }
+}
